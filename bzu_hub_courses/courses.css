@@ -74,9 +74,9 @@ header {
     padding-bottom: 1.2rem;
 }
 #guide * { float: right; }
-#guide b { margin-right: 5rem; }
+#guide b { margin-right: 4rem; }
 #guide a { 
-    margin-right: 5rem; 
+    margin-right: 4rem; 
     color: cornflowerblue;
     text-decoration: none;
 }
