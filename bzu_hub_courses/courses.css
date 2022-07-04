@@ -70,6 +70,7 @@ header {
     border-radius: .5rem;
     font-size: .9rem;
     font-weight: bold;
+    line-height: 1rem;
     box-shadow: 0 0 .25rem gray;
 }
 #guide {
