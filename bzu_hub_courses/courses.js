@@ -138,14 +138,10 @@ function calculate_requisites(me, callback) {
         newReqs = [];
         preReqs.forEach(requirement => newReqs.push(...courses.filter((course) => 
             course[2].includes(requirement)).map(course => course[1])));
-        console.log('1) newReqs: ' + newReqs);
         newReqs = [...new Set(newReqs)];
-        console.log('2) newReqs: ' + newReqs);
         preReqs = newReqs;
         requisite_for.push(...newReqs);
-        console.log('3) requisite_for: ' + requisite_for);
     }
-    console.log('3) requisite_for: ' + requisite_for);
     callback(me, direct_requisites, indirect_requisites, requisite_for);
 }
 
@@ -165,7 +161,6 @@ function release_requirements(me, direct_requisites, indirect_requisites, requis
     me.className = 'course normal';
     [...direct_requisites, ...indirect_requisites, ...requisite_for].forEach(
         requirement => { 
-            console.log('requirment: ' + requirement); ////
             document.getElementById(requirement).className = 'course released';
     });
 }
