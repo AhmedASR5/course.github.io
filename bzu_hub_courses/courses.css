@@ -1,0 +1,96 @@
+html{ font-size: .94vw; }
+* {
+    padding: 0;
+    margin: 0;
+}
+body { padding: 2rem; }
+header {
+    text-align: center;
+    padding: 0 0 .6rem 0;
+}
+#icon {
+    display: inline;
+    height: 2.5rem;
+}
+#title {
+    display: inline;
+    font-size: 2.5rem;
+}
+#schedule {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto;
+    gap: .6rem;
+    height: 43.2rem;
+    width: 94rem;
+    font-size: 1.5rem;
+    margin: auto;
+    justify-content: center;
+    align-content: flex-end;
+    border: .2rem solid gray;
+    border-radius: 1rem;
+}
+#schedule * { text-align: center; }
+.year {
+    grid-row: 1;
+    grid-column: span 2;
+    margin: 1rem 0 0 0;
+    padding: 0;
+    background-color: gainsboro;
+    font-size: 1.4rem;
+}
+.semester {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background-color: ghostwhite;
+    font-size: 1.2rem;
+}
+.semester > h4 {
+    margin: 0 0 1.6rem 0;
+    padding: 0;
+}
+.course {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    width: 7.4rem;
+    height: 3.4rem;
+    margin: 0.3rem 0;
+    padding: .5rem;
+    border-radius: .5rem;
+    font-size: .9rem;
+    font-weight: bold;
+    box-shadow: 0 0 .25rem gray;
+}
+#guide {
+    grid-column: span 10;
+    height: .2rem;
+    font-size: 1rem;
+    justify-self: end;
+    padding-bottom: 1.2rem;
+}
+#guide * { float: right; }
+#guide b { margin-right: 5rem; }
+#guide a { 
+    margin-right: 5rem; 
+    color: cornflowerblue;
+    text-decoration: none;
+}
+.tip {
+    margin: .2rem 1.2rem 0 .2rem;
+    height: .5rem;
+    width: 2rem;
+}
+abbr { 
+    display: inline-block; 
+    text-decoration: none;
+}
+.normal { background-color: white; }
+.course_to_get_requisites { background-color: turquoise; }
+.direct_requisites { background-color: orangered; }
+.indirect_requisites { background-color: yellow; }
+.requisite_for { background-color: lightgreen; }
