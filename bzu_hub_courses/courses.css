@@ -95,6 +95,7 @@ abbr {
 .indirect_requisites { background-color: yellow; }
 .requisite_for { background-color: lightgreen; }
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
     html{ font-size: .8vw; }
 }
+ */
