@@ -28,7 +28,7 @@ header {
     grid-template-rows: auto auto;
     gap: .6rem;
     height: 43.2rem;
-    width: 94rem;
+    width: 100rem;
     font-size: 1.5rem;
     margin: auto;
     justify-content: center;
@@ -63,7 +63,7 @@ header {
     flex-direction: column; 
     justify-content: center;
     align-items: center;
-    width: 7.4rem;
+    width: 8.2rem;
     height: 3.4rem;
     margin: 0.3rem 0;
     padding: .5rem;
