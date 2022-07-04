@@ -1,6 +1,7 @@
 html{ 
     zoom: .1;
-    font-size: 9vw;  
+    font-size: 9vw; 
+    font-family: 'Times New Roman', Times, serif; 
 }
 * {
     padding: 0;
