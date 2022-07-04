@@ -95,7 +95,10 @@ abbr {
 .indirect_requisites { background-color: yellow; }
 .requisite_for { background-color: lightgreen; }
 
-/* @media (max-width: 767px) {
-    html{ font-size: .8vw; }
+@media (max-width: 800px) {
+    html{ font-size: 1vw; }
+    .year { font-size: 1.2rem; }
+    .semester { font-size: 1rem; }
+    .course { font-size: .7rem; }
+    #guide { font-size: .8rem; }
 }
- */
