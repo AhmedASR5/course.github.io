@@ -1,6 +1,6 @@
 html{ 
-    zoom: .25;
-    font-size: 3.7vw;  
+    zoom: .1;
+    font-size: 9vw;  
 }
 * {
     padding: 0;
@@ -11,9 +11,12 @@ header {
     text-align: center;
     padding: 0 0 .6rem 0;
 }
-#icon {
+#logo {
     display: inline;
-    height: 2.5rem;
+    height: 5rem;
+    margin-top: -4rem;
+    position: relative;
+    top: 1.4rem;
 }
 #title {
     display: inline;
