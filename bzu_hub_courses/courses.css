@@ -34,7 +34,7 @@ header {
     margin: auto;
     justify-content: center;
     align-content: flex-end;
-    border: .2rem solid #808080;
+    border: .2rem solid gray;
     border-radius: 1rem;
 }
 #schedule * { text-align: center; }
@@ -43,7 +43,7 @@ header {
     grid-column: span 2;
     margin: 1rem 0 0 0;
     padding: 0;
-    background-color: #dcdcdc;
+    background-color: gainsboro;
     font-size: 1.4rem;
 }
 .semester {
@@ -73,7 +73,7 @@ header {
     font-size: .9rem;
     font-weight: bold;
     line-height: 1rem;
-    box-shadow: 0 0 .25rem #808080;
+    box-shadow: 0 0 .25rem gray;
     position: relative; /* for .course:hover .note */
 }
 #guide {
@@ -87,7 +87,7 @@ header {
 #guide b { margin-right: 3rem; }
 #guide a { 
     margin-right: 3rem; 
-    color: #6495ed;
+    color: cornflowerblue;
     text-decoration: none;
 }
 .tip {
@@ -113,7 +113,7 @@ header {
 }
 th, td { padding: 0 1rem; }
 .normal { background-color: white; }
-.course_to_get_requisites { background-color: #40e0d0; }
-.direct_requisites { background-color: #ff4500; }
-.indirect_requisites { background-color: #ffff00; }
-.requisite_for { background-color: #90ee90; }
+.course_to_get_requisites { background-color: turquoise; }
+.direct_requisites { background-color: orangered; }
+.indirect_requisites { background-color: yellow; }
+.requisite_for { background-color: lightgreen; }
