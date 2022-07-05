@@ -107,9 +107,7 @@ header {
     box-shadow: inherit;
     font-size: 1rem;
 }
-.course:hover .note {
-    display: block;
-}
+.course:hover .note { display: block; }
 th, td { padding: 0 1rem; }
 .normal { background-color: white; }
 .course_to_get_requisites { background-color: turquoise; }
