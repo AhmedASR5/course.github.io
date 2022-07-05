@@ -108,9 +108,10 @@ for(let course of courses) {
     }
     else {
         str += '<div id="' + course[1] + '"class="course released" onmouseenter="calculate_requisites(this,'
-            + 'get_requirements)" onmouseleave="calculate_requisites(this, release_requirements)"><div>' 
-            + course[0] + '</div><div>' + course[1] + '</div>' + (course[3] ? '<div class="note">'
-            + course[3] + '</div>' : '') + '</div>';
+            + 'get_requirements)" onmouseleave="calculate_requisites(this, release_requirements)"' 
+            + 'mouseover="calculate_requisites(this, get_requirements)" mouseout="calculate_requisites(this,'
+            + ' release_requirements)"><div>' + course[0] + '</div><div>' + course[1] + '</div>' 
+            + (course[3] ? '<div class="note">' + course[3] + '</div>' : '') + '</div>';
     }
 }
 document.getElementById(parseInt(i/2) + ':2').innerHTML += str;
