@@ -67,7 +67,7 @@ const courses = [
                                                     + '<tr><td>ENCS4370, ENCS3390</td><td>*(3)عمارة الحاسبات المتقدمة</td></tr>'
                                                     + '<tr><td>ENCS3340</td><td>*(4)تعلم الآلة وعلم البيانات</td></tr>'
                                                     + '</table>'],
-    ['مساق اختياري تركيز', '', [], 'المتطلبات حسب التركيز'],
+    ['مساق اختياري تركيز', 'ChMa1', [], 'المتطلبات حسب التركيز'],
     ['الحضارة الأوروبية المعاصرة', 'CULS331', []],
 
     'year 5 semester 1',
@@ -76,10 +76,10 @@ const courses = [
                                                     + '<tr><td>ENCS3330</td><td>*(3)(VLSI)تصميم الرقائق المتكاملة</td></tr>'
                                                     + '<tr><td>ENCS3340</td><td>*(4)(NLP)نظم المعلومات القائمة على النصوص</td></tr>'
                                                     + '</table>'],
-    ['مساق اختياري تركيز', '', [], 'المتطلبات حسب التركيز'],
+    ['مساق اختياري تركيز', 'ChMa2', [], 'المتطلبات حسب التركيز'],
     ['مقدمة مشروع التخرج', 'ENCS5200', []],
     ['مختبر نظم الزمن الحقيقي وأساليب المواءمة', 'ENCS5140', ['ENCS4330']],
-    ['اختياري جامعة 1', '', [], 'حسب دائرة المساق'],
+    ['اختياري جامعة 1', 'ChCo1', [], 'حسب دائرة المساق'],
     ['الفكر العربي المعاصر', 'CULS332', []],
 
     'year 5 semester 2',
@@ -95,7 +95,7 @@ const courses = [
                                             + '<tr><td>ENCS3340</td><td>*(4)مختبر الأنظمة الذكية</td></tr>'
                                             + '</table>'],
     ['مختبر متقدم في هندسة الحاسوب', 'ENCS5150', []],
-    ['اختياري جامعة 2', '', [], 'حسب دائرة المساق']
+    ['اختياري جامعة 2', 'ChCo2', [], 'حسب دائرة المساق']
 ]
 
 let str = '';
@@ -107,61 +107,44 @@ for(let course of courses) {
         str = '';
     }
     else {
-        str += '<div id="' + course[1] + '"class="course released" onmouseenter="calculate_requisites(this,'
-            + 'get_requirements)" onmouseleave="calculate_requisites(this, release_requirements)"' 
-            + 'mouseover="calculate_requisites(this, get_requirements)" mouseout="calculate_requisites(this,'
-            + ' release_requirements)"><div>' + course[0] + '</div><div>' + course[1] + '</div>' 
-            + (course[3] ? '<div class="note">' + course[3] + '</div>' : '') + '</div>';
+        str += `<div id="${course[1]}" class="course released" onmouseover="get_requirements(this)"><div>
+        ${course[0]}</div><div>${course[1]}</div>${course[3] ? `<div class="note">${course[3]}</div>`:''}</div>`;
     }
 }
 document.getElementById(parseInt(i/2) + ':2').innerHTML += str;
 
-function calculate_requisites(me, callback) {
-    let direct_requisites = courses.find((course) => course[1] === me.id)[2];
+function get_requirements(me) {
+    //Remove highlight from items
+    [...document.getElementsByTagName('div')].forEach(
+        course => {if(/course/.test(course.className)) course.className = 'course released'});
+    me.className = 'course course_to_get_requisites'; //highlight the item
+    let direct_requisites = courses.find((course) => course[1] === me.id)[2]; //find direct requisites items
+    //highlight direct requisites items
+    direct_requisites.forEach(req => {document.getElementById(req).className = 'course direct_requisites';});
+    //find indirect requisites items
     let indirect_requisites = [];
     let preReqs = direct_requisites;
     let newReqs = [''];
     while(newReqs.length > 0){    
         newReqs = [];
-        preReqs.forEach(requirement => newReqs.push(...courses.find((course) => course[1] === requirement)[2]));
+        preReqs.forEach(req => newReqs.push(...courses.find((course) => course[1] === req)[2]));
         newReqs = [...new Set(newReqs)];
         preReqs = newReqs;
         indirect_requisites.push(...newReqs);
     }
+    //highlight indirect requisites items
+    indirect_requisites.forEach(req => {document.getElementById(req).className = 'course indirect_requisites';});
+    //find requisite for items
     let requisite_for = [];
     preReqs = [me.id];
     newReqs = [''];
     while(newReqs.length > 0){    
         newReqs = [];
-        preReqs.forEach(requirement => newReqs.push(...courses.filter((course) => 
-            course[2].includes(requirement)).map(course => course[1])));
-        newReqs = [...new Set(newReqs)];
-        preReqs = newReqs;
+        preReqs.forEach(req => newReqs.push(...courses.filter((course) => 
+            course[2].includes(req)).map(course => course[1])));
+        preReqs = newReqs = [...new Set(newReqs)];
         requisite_for.push(...newReqs);
     }
-    callback(me, direct_requisites, indirect_requisites, requisite_for);
-}
-
-function get_requirements(me, direct_requisites, indirect_requisites, requisite_for) {
-    me.className = 'course course_to_get_requisites';
-    direct_requisites.forEach(requirement => {
-        if(document.getElementById(requirement).tagName !== 'tr')
-            document.getElementById(requirement).className = 'course direct_requisites';
-    });
-    indirect_requisites.forEach(requirement => {
-        if(document.getElementById(requirement).tagName !== 'tr')
-            document.getElementById(requirement).className = 'course indirect_requisites';
-    });
-    requisite_for.forEach(requirement => {
-        if(document.getElementById(requirement).tagName !== 'tr')
-            document.getElementById(requirement).className = 'course requisite_for';
-    });
-}
-function release_requirements(me, direct_requisites, indirect_requisites, requisite_for) {
-    me.className = 'course normal';
-    [...direct_requisites, ...indirect_requisites, ...requisite_for].forEach(
-        requirement => { 
-            if(document.getElementById(requirement).tagName !== 'tr')
-                document.getElementById(requirement).className = 'course released';
-    });
+    //highlight requisite for items
+    requisite_for.forEach(req => {document.getElementById(req).className = 'course requisite_for';});
 }
