@@ -111,10 +111,6 @@ for(let course of courses) {
             + 'get_requirements)" onmouseleave="calculate_requisites(this, release_requirements)"><div>' 
             + course[0] + '</div><div>' + course[1] + '</div>' + (course[3] ? '<div class="note">'
             + course[3] + '</div>' : '') + '</div>';
-        // str += (course[3] ? '<abbr title="' + course[3] + '">' : '') + '<div id="' + course[1] 
-        //     + '"class="course released" onmouseenter="calculate_requisites(this,get_requirements)" '
-        //     + 'onmouseleave="calculate_requisites(this, release_requirements)"><div>' + course[0] 
-        //     + '</div><div>' + course[1] + '</div></div>' + (course[3] ? '</abbr>' : '');
     }
 }
 document.getElementById(parseInt(i/2) + ':2').innerHTML += str;
