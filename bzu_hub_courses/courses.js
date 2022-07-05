@@ -1,5 +1,3 @@
-
-
 const courses = [
     //['NAME', 'CODE', ['requirement']s, 'notes']
     //'year 1 semester 1',
@@ -64,18 +62,20 @@ const courses = [
     'year 4 semester 2',
     ['الهندسة البرمجية', 'COMP433', ['COMP333']],
     ['تطبيقات الزمن الحقيقي والأنظمة المقحمة', 'ENCS4330', ['ENCS3130', 'ENCS3390']],
-    ['مساق من أحد التراكيز', 'ENCS53(2,3,4)1', [], '\t\tالمادة\t\t\t\tالمتطلبات\n'
-                                                    + '\t\tENCS3320\t\t*(2)شبكات الحاسوب المتقدمة\n'
-                                                    + '\tENCS4370, ENCS3390\t*(3)عمارة الحاسبات المتقدمة\n'
-                                                    +'\t\tENCS3340\t\t*(4)تعلم الآلة وعلم البيانات'],
+    ['مساق من أحد التراكيز', 'ENCS53(2,3,4)1', [], '<table><tr><th>المتطلبات</th><th>المادة</th></tr>'
+                                                    + '<tr><td>ENCS3320</td><td>*(2)شبكات الحاسوب المتقدمة</td></tr>'
+                                                    + '<tr><td>ENCS4370, ENCS3390</td><td>*(3)عمارة الحاسبات المتقدمة</td></tr>'
+                                                    + '<tr><td>ENCS3340</td><td>*(4)تعلم الآلة وعلم البيانات</td></tr>'
+                                                    + '</table>'],
     ['مساق اختياري تركيز', '', [], 'المتطلبات حسب التركيز'],
     ['الحضارة الأوروبية المعاصرة', 'CULS331', []],
 
     'year 5 semester 1',
-    ['مساق من أحد التراكيز', 'ENCS53(2,3,4)2', [], '\t\tالمادة\t\t\t\t\tالمتطلبات\n'
-                                                    + '\t\tENCS4320\t\t\t*(2)بروتوكولات أمان الشبكة\n'
-                                                    + '\t\tENCS3330\t\t*(3)(VLSI)تصميم الرقائق المتكاملة\n'
-                                                    +'\t\tENCS3340\t*(4)(NLP)نظم المعلومات القائمة على النصوص'],
+    ['مساق من أحد التراكيز', 'ENCS53(2,3,4)2', [], '<table><tr><th>المتطلبات</th><th>المادة</th></tr>'
+                                                    + '<tr><td>ENCS4320</td><td>*(2)بروتوكولات أمان الشبكة</td></tr>'
+                                                    + '<tr><td>ENCS3330</td><td>*(3)(VLSI)تصميم الرقائق المتكاملة</td></tr>'
+                                                    + '<tr><td>ENCS3340</td><td>*(4)(NLP)نظم المعلومات القائمة على النصوص</td></tr>'
+                                                    + '</table>'],
     ['مساق اختياري تركيز', '', [], 'المتطلبات حسب التركيز'],
     ['مقدمة مشروع التخرج', 'ENCS5200', []],
     ['مختبر نظم الزمن الحقيقي وأساليب المواءمة', 'ENCS5140', ['ENCS4330']],
@@ -84,15 +84,16 @@ const courses = [
 
     'year 5 semester 2',
     ['مشروع التخرج', 'ENCS5300', ['ENCS5200'], ['*ENCS4300 التدريب العملي']],
-    ['مساق من أحد التراكيز', 'ENCS53(2,3,4)3', [], '\t\tالمادة\t\t\t\t\t\tالمتطلبات\n'
-                                                    + '\t\tENCS3320,\t\t*(2)الشبكات اللاسلكية وشبكات الهاتف النقال\n'
-                                                    + '\tENEE339 أو ENEE3309\n'
-                                                    + '\t\tENCS4330\t\t\t\t*(3)الأنظمة المدمجة المتقدمة\n'
-                                                    +'\t\tENCS3340\t\t\t\t\t*(4)رؤية الحاسوب'],
-    ['مختبر تركيز', 'ENCS51(2,3,4)1', [], '\t\tالمادة\t\t\t\t\tالمتطلبات\n'
-                                            + '\t\tENCS5322\t*(2)مختبر أمن المعلومات وشبكات الحاسوب\n'
-                                            + '\t\tENCS3330\t\t\t*(3)مختبر تصميم الأجهزة\n'
-                                            +'\t\tENCS3340\t\t\t*(4)مختبر الأنظمة الذكية'],
+    ['مساق من أحد التراكيز', 'ENCS53(2,3,4)3', [], '<table><tr><th>المتطلبات</th><th>المادة</th></tr>'
+                                                    + '<tr><td>ENEE339أوENEE3309, ENCS3320</td><td>*(2)الشبكات اللاسلكية وشبكات الهاتف النقال</td></tr>'
+                                                    + '<tr><td>ENCS4330</td><td>(3)*الأنظمة المدمجة المتقدمة</td></tr>'
+                                                    + '<tr><td>ENCS3340</td><td>*(4)رؤية الحاسوب</td></tr>'
+                                                    + '</table>'],
+    ['مختبر تركيز', 'ENCS51(2,3,4)1', [], '<table><tr><th>المتطلبات</th><th>المادة</th></tr>'
+                                            + '<tr><td>ENCS5322</td><td>*(2)مختبر أمن المعلومات وشبكات الحاسوب</td></tr>'
+                                            + '<tr><td>ENCS3330</td><td>*(3)مختبر تصميم الأجهزة</td></tr>'
+                                            + '<tr><td>ENCS3340</td><td>*(4)مختبر الأنظمة الذكية</td></tr>'
+                                            + '</table>'],
     ['مختبر متقدم في هندسة الحاسوب', 'ENCS5150', []],
     ['اختياري جامعة 2', '', [], 'حسب دائرة المساق']
 ]
@@ -106,15 +107,14 @@ for(let course of courses) {
         str = '';
     }
     else {
-        str += (course[3] ? '<abbr title="' + course[3] + '">' : '') + '<div id="' + course[1] 
-            + '"class="course released" onmouseenter="calculate_requisites(this,get_requirements)" '
-            + 'onmouseleave="calculate_requisites(this, release_requirements)"><div>' + course[0] 
-            + '</div><div>' + course[1] + '</div></div>' + (course[3] ? '</abbr>' : ''); 
-
-        // str += '<div id="'+ course[1] + '"class="course released" onmouseenter="calculate_requisites(this,'
-        //     + 'get_requirements)" onmouseleave="calculate_requisites(this, release_requirements)">' 
-        //     + (course[3] ? '<div class="note">' + course[3] + '</div>' : '') + '<div>' + course[0] 
-        //     + '</div><div>' + course[1] + '</div></div>'; 
+        str += '<div id="' + course[1] + '"class="course released" onmouseenter="calculate_requisites(this,'
+            + 'get_requirements)" onmouseleave="calculate_requisites(this, release_requirements)"><div>' 
+            + course[0] + '</div><div>' + course[1] + '</div>' + (course[3] ? '<div class="note">'
+            + course[3] + '</div>' : '') + '</div>';
+        // str += (course[3] ? '<abbr title="' + course[3] + '">' : '') + '<div id="' + course[1] 
+        //     + '"class="course released" onmouseenter="calculate_requisites(this,get_requirements)" '
+        //     + 'onmouseleave="calculate_requisites(this, release_requirements)"><div>' + course[0] 
+        //     + '</div><div>' + course[1] + '</div></div>' + (course[3] ? '</abbr>' : '');
     }
 }
 document.getElementById(parseInt(i/2) + ':2').innerHTML += str;
@@ -148,19 +148,23 @@ function calculate_requisites(me, callback) {
 function get_requirements(me, direct_requisites, indirect_requisites, requisite_for) {
     me.className = 'course course_to_get_requisites';
     direct_requisites.forEach(requirement => {
-        document.getElementById(requirement).className = 'course direct_requisites';
+        if(document.getElementById(requirement).tagName !== 'tr')
+            document.getElementById(requirement).className = 'course direct_requisites';
     });
     indirect_requisites.forEach(requirement => {
-        document.getElementById(requirement).className = 'course indirect_requisites';
+        if(document.getElementById(requirement).tagName !== 'tr')
+            document.getElementById(requirement).className = 'course indirect_requisites';
     });
     requisite_for.forEach(requirement => {
-        document.getElementById(requirement).className = 'course requisite_for';
+        if(document.getElementById(requirement).tagName !== 'tr')
+            document.getElementById(requirement).className = 'course requisite_for';
     });
 }
 function release_requirements(me, direct_requisites, indirect_requisites, requisite_for) {
     me.className = 'course normal';
     [...direct_requisites, ...indirect_requisites, ...requisite_for].forEach(
         requirement => { 
-            document.getElementById(requirement).className = 'course released';
+            if(document.getElementById(requirement).tagName !== 'tr')
+                document.getElementById(requirement).className = 'course released';
     });
 }
