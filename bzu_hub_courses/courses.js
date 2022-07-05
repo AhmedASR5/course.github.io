@@ -31,7 +31,7 @@ const courses = [
     ['مختبر الأنظمة الرقمية وتنظيم الحاسوب', 'ENCS2110', ['ENCS2380']],
     ['الإشارات والأنظمة', 'ENEE2312', ['MATH331']],
     ['تحليل الدوائر الكهربائية', 'ENEE2304', ['PHYS132', 'MATH331']],
-    ['لغة إنجليزية مستوى متوسط 4', 'ENGC2202', []],
+    ['لغة إنجليزية مستوى متوسط 4', 'ENGC2202', ['ENGC2201']],
 
     'year 3 semester 1',
     ['تصميم الأنظمة الرقمية المتقدمة', 'ENCS3310', ['ENCS2380']],
@@ -77,7 +77,7 @@ const courses = [
                                                     + '<tr><td>ENCS3340</td><td>*(4)(NLP)نظم المعلومات القائمة على النصوص</td></tr>'
                                                     + '</table>'],
     ['مساق اختياري تركيز', 'ChMa2', [], 'المتطلبات حسب التركيز'],
-    ['مقدمة مشروع التخرج', 'ENCS5200', []],
+    ['مقدمة مشروع التخرج', 'ENCS5200', [], '*ساعة 115'],
     ['مختبر نظم الزمن الحقيقي وأساليب المواءمة', 'ENCS5140', ['ENCS4330']],
     ['اختياري جامعة 1', 'ChCo1', [], 'حسب دائرة المساق'],
     ['الفكر العربي المعاصر', 'CULS332', []],
@@ -94,7 +94,7 @@ const courses = [
                                             + '<tr><td>ENCS3330</td><td>*(3)مختبر تصميم الأجهزة</td></tr>'
                                             + '<tr><td>ENCS3340</td><td>*(4)مختبر الأنظمة الذكية</td></tr>'
                                             + '</table>'],
-    ['مختبر متقدم في هندسة الحاسوب', 'ENCS5150', []],
+    ['مختبر متقدم في هندسة الحاسوب', 'ENCS5150', [], '*ساعة 115'],
     ['اختياري جامعة 2', 'ChCo2', [], 'حسب دائرة المساق']
 ]
 
@@ -128,7 +128,7 @@ function get_requirements(me) {
     while(newReqs.length > 0){    
         newReqs = [];
         preReqs.forEach(req => newReqs.push(...courses.find((course) => course[1] === req)[2]));
-        newReqs = [...new Set(newReqs)];
+        newReqs = [...new Set(newReqs.filter(course => !direct_requisites.includes(course)))];
         preReqs = newReqs;
         indirect_requisites.push(...newReqs);
     }
