@@ -30,6 +30,8 @@ function Remove_highlights() { //Remove highlight from items
 }
 
 function get_requirements(me) {
+    [...document.getElementsByTagName('div')].forEach(
+        course => {if(/course/.test(course.className)) course.className = 'course transparent'});
     me.className = 'course course_to_get_requisites'; //highlight the item
     let direct_requisites = courses.find((course) => course[1] === me.id)[2]; //find direct requisites items
     //highlight direct requisites items

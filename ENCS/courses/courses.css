@@ -78,6 +78,13 @@ header {
     position: relative; /* for .course:hover .note */
 }
 .course:hover .note { display: block; }
+th, td { padding: 0 1rem; }
+.normal { background-color: white; }
+.course_to_get_requisites { background-color: turquoise; }
+.direct_requisites { background-color: #ff5500; }
+.indirect_requisites { background-color: yellow; }
+.requisite_for { background-color: lightgreen; }
+.transparent { color: #0005; }
 #guide {
     grid-column: 1 / -1;
     height: .2rem;
@@ -113,9 +120,3 @@ header {
     font-size: 1rem;
 }
 
-th, td { padding: 0 1rem; }
-.normal { background-color: white; }
-.course_to_get_requisites { background-color: turquoise; }
-.direct_requisites { background-color: #ff5500; }
-.indirect_requisites { background-color: yellow; }
-.requisite_for { background-color: lightgreen; }
