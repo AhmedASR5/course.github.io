@@ -85,5 +85,5 @@ const courses = [
 
     'year 4 semester 2',
     ['حلقة بحث', 'NUTD411', ['COMP333']],
-    ['تدريب عملي 2', 'NUTD4300', ['ENCS3130', 'ENCS3390']]
+    ['تدريب عملي 2', 'NUTD4300', ['ENCS3130', 'ENCS3390']
 ];
