@@ -1,0 +1,121 @@
+html{ 
+    zoom: .125;
+    font-size: 9vw; 
+    font-family: 'Times New Roman', Times, serif; 
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+body { padding: 2rem;}
+header {
+    text-align: center;
+    padding: 0 0 .6rem 0;
+}
+#logo {
+    display: inline;
+    height: 5rem;
+    margin-top: -4rem;
+    position: relative;
+    top: 1.4rem;
+}
+#title {
+    display: inline;
+    font-size: 2.5rem;
+}
+#schedule {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 9.6rem);
+    grid-template-rows: auto auto;
+    gap: .6rem;
+    height: 43.2rem;
+    width: fit-content;
+    padding: 0 1.6rem;
+    font-size: 1.5rem;
+    margin: auto;
+    justify-content: center;
+    align-content: flex-end;
+    border: .2rem solid gray;
+    border-radius: 1rem;
+}
+#schedule * { text-align: center; }
+.year {
+    grid-row: 1;
+    grid-column: span 2;
+    margin: 1rem 0 0 0;
+    padding: 0;
+    background-color: gainsboro;
+    font-size: 1.4rem;
+}
+.semester {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background-color: ghostwhite;
+    font-size: 1.2rem;
+}
+.semester > h4 {
+    margin: 0 0 1.6rem 0;
+    padding: 0;
+}
+.course {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    width: 8.5rem;
+    height: 3.4rem;
+    margin: 0.3rem 0;
+    padding: .5rem;
+    border-radius: .5rem;
+    font-size: .9rem;
+    font-weight: bold;
+    line-height: 1rem;
+    box-shadow: 0 0 .25rem gray;
+    position: relative; /* for .course:hover .note */
+}
+.course:hover .note { display: block; }
+#guide {
+    grid-column: 1 / -1;
+    height: .2rem;
+    font-size: 1rem;
+    justify-self: end;
+    padding-bottom: 1.4rem;
+    position: relative;
+    right: -9rem;
+}
+#guide * { float: right; }
+#note { margin-right: 3rem; }
+#link a { 
+    margin-right: 3rem; 
+    color: cornflowerblue;
+    text-decoration: none;
+}
+.tip {
+    margin: .2rem 1.2rem 0 .2rem;
+    height: .5rem;
+    width: 2rem;
+}
+.note {
+    position: absolute;
+    bottom: 90%;
+    right: 90%;
+    display: none;
+    padding: 1rem;
+    width: max-content;
+    background:rgba(255, 69, 0, .7);
+    color: white;
+    border-radius: 1.6rem;
+    box-shadow: inherit;
+    font-size: 1rem;
+}
+
+th, td { padding: 0 1rem; }
+.normal { background-color: white; }
+.course_to_get_requisites { background-color: turquoise; }
+.direct_requisites { background-color: #ff5500; }
+.indirect_requisites { background-color: yellow; }
+.requisite_for { background-color: lightgreen; }
