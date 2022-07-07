@@ -1,8 +1,8 @@
 const title = 'Birzeit University Department of Architectural Engineering Advisory Plan';
-const note = ' ';
-const link_title = ' ';
-const url = ' ';
-const link_more_info = ' ';
+const note = '';
+const link_title = '';
+const url = '';
+const link_more_info = '';
 
 
 const courses = [
@@ -36,7 +36,6 @@ const courses = [
 
 
     'year 2 semester 2',
-
     ['تصميم معماري 2', 'ENAR2321', ['ENAR2311']],
     ['تاريخ عمارة 3', 'ENAR2381', ['ENAR2351']],
     ['ميكانيكا', 'ENCE223', ['ENCE232']],
@@ -48,19 +47,17 @@ const courses = [
 
 
     'year 3 semester 1',
-
     ['تصميم معماري 3', 'ENAR3411', ['ENAR2321']],
     ['نظريات عمارة 1', 'ENAR3331', ['ENAR2381']],
     ['التخطيط العمراني1', 'ENPL3331', [' ENAR238']],
     ['تشيد مباني3', 'ENAR3251', ['ENAR2471']],
     ['انظمة انشائية', 'ENCE2351', ['ENCE223']],
     ['مساحة', 'ENCE327', ['ENAR1211']],
-    ['مختبر مساحة', 'ENCE317', ['ENCE327'],' او متزامن'],
+    ['مختبر مساحة', 'ENCE317', ['ENCE327'],'أو متزامن'],
 
 
 
     'year 3 semester 2',
-
     ['تصميم معماري 4', 'ENAR3421', ['ENCE2351','ENAR3411']],
     ['نظريات عمارة 2', 'ENAR3241', ['ENAR3331']],
     ['العمارة في فلسطين', 'ENAR3301', ['ENAR2381']],
@@ -71,7 +68,6 @@ const courses = [
 
 
     'year 4 semester 1',
-
     ['تصميم معماري 5', 'ENAR441', ['ENPL3341','ENAR3421']],
     ['عمارة المشهد', 'ENPL436', ['ENPL3341','ENAR3421']],
     ['هندسة اضاءة وصوت', 'ENEE3307', ['ENAR3251'],'أو متزامن'],
@@ -89,7 +85,7 @@ const courses = [
     ['تصميم داخلي', 'ENAR4391', ['ENAR3421']],
     ['عمارة بيئية', 'ENAR4251', ['ENAR3421']],
     ['هندسة ميكانيكية و صحية', 'ENME4301', ['ENAR3251']],
-    ['مادة تركيز', [], `<table><tr><th>الرمز<th>المادة</th></tr>
+    ['مادة تركيز', ' ', [], `<table><tr><th>الرمز<th>المادة</th></tr>
                                                    <tr><td>ENAR4121</td><td>(2)ندوة في التصميم المعماري</td></tr>
                                                    <tr><td>ENAR5311</td><td>(2)ندوة في التصميم الداخلي</td></tr>
                                                     <tr><td>ENAR4101</td><td>(2)ندوة في التصميم الداخلي</td></tr>
@@ -98,22 +94,21 @@ const courses = [
 
     'year 5 semester 1',
 
-    ['مقدمة مشروع تخرج', 'ENAR520',['ENAR4141','ENAR4101','ENAR4421'],
-        ['مادة تركيز',' ',[], `<table><tr><th>الرمز<th>المادة</th></tr>
+    ['مقدمة مشروع تخرج', 'ENAR520',['ENAR4141','ENAR4101','ENAR4421']],
+    ['مادة تركيز',' ',[], `<table><tr><th>الرمز<th>المادة</th></tr>
                                                    <tr><td>ENAR5311</td><td>(3) العمارة المعاصرة</td></tr>
                                                    <tr><td>ENAR5321</td><td>(3) نظريات التصميم الداخلي</td></tr>
                                                     <tr><td>ENAR5331</td><td>(3)نظريات الحفاظ و الترميم</td></tr>
                                                     </table>`],
 
-        ['مادة تركيز',' ',[], `<table><tr><th>الرمز<th>المادة</th></tr>
-                                                  <tr><td>ENAR5411</td><td>(4) تصميم معماري متقدم</td></tr>
-                                                    <tr><td>ENAR5421</td><td>(4) تصميم داخلي متقدم</td></tr>
-                                                    <tr><td>ENAR5441</td><td>(4) ترميم وصيانة مباني متقدم </td></tr>
-                                                    </table>`],
+    ['مادة تركيز',' ',[], `<table> <tr><th>الرمز<th>المادة</th></tr>
+                                    <tr><td>ENAR5411</td><td>(4) تصميم معماري متقدم</td></tr>
+                                    <tr><td>ENAR5421</td><td>(4) تصميم داخلي متقدم</td></tr>
+                                    <tr><td>ENAR5441</td><td>(4) ترميم وصيانة مباني متقدم </td></tr>
+                            </table>`],
 
 
     'year 5 semester 2',
-
-    ['مهارات متقدمة',' ', 'ENAR5111', []],
-    ['مشروع تخرج', 'ENAR530', ['ENAR520'],'بالإضافة إلى اجتياز إحدى التراكيز']]
+    ['مهارات متقدمة',' ', [], 'ENAR5111'],
+    ['مشروع تخرج', 'ENAR530', ['ENAR520'],'بالإضافة إلى اجتياز إحدى التراكيز']
 ];

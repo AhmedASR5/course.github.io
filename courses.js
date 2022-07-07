@@ -22,6 +22,7 @@ for(let course of courses) {
 document.getElementById('schedule').innerHTML = str2 + str + '</div>' 
     + document.getElementById('schedule').innerHTML;
 
+document.getElementById('guide').style.gridColumn = `1/${i}`;
 if(i > 10) document.getElementsByTagName('html')[0].style.zoom = `${1/(i-.5)}`;
 else document.getElementById('guide').style.zoom = `${(i-1)/10}`;
 function Remove_highlights() { //Remove highlight from items
