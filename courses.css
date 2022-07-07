@@ -87,7 +87,7 @@ th, td { padding: 0 1rem; }
 .transparent { color: #0005; }
 #guide {
     height: .2rem;
-    font-size: .8rem;
+    font-size: 1rem;
     justify-self: end;
     padding: 0 .4rem 1.4rem 0;
 }
