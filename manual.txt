@@ -1,0 +1,21 @@
+how to write courses array in data.js file
+    notes:-
+        1) course format is //['NAME', 'CODE', ['requirement']s, 'notes', last one is number if summer]
+        2) 'notes' is not required
+        3) you have to separate between the semesters by a string like: '', 'year 1 semester2'
+        4) when there no requirements leave the array empty [] not ['']
+        5) when there no 'CODE' (course code) write ' ' not ''
+        6) you can use html tags like table, like: `<table><tr><th>المتطلبات</th><th>المادة</th></tr>
+                                                    <tr><td>ENCS3320</td><td>*(2)شبكات الحاسوب المتقدمة</td></tr>
+                                                    <tr><td>ENCS4370, ENCS3390</td><td>*(3)عمارة الحاسبات المتقدمة</td></tr>
+                                                    <tr><td>ENCS3340</td><td>*(4)تعلم الآلة وعلم البيانات</td></tr>
+                                                    </table>`
+                                                    or
+                                                    '<table><tr><th>المتطلبات</th><th>المادة</th></tr>'
+                                                    + '<tr><td>ENCS3320</td><td>*(2)شبكات الحاسوب المتقدمة</td></tr>'
+                                                    + '<tr><td>ENCS4370, ENCS3390</td><td>*(3)عمارة الحاسبات المتقدمة</td></tr>'
+                                                    + '<tr><td>ENCS3340</td><td>*(4)تعلم الآلة وعلم البيانات</td></tr>'
+                                                    + '</table>'
+        7) separatelines in notes by <br> not \n like: '*COMP230 أو COMP133<br>*مستوى سنة 3'
+        8) to add course in summer semester you have to add it in the semmester that has more courses on it
+            - and you have to add a number on the last index on the it like: ['التدريب العملي', 'ENCS4300', [], 'إتمام 90 ساعة', any number (like: 1)]

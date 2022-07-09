@@ -1,10 +1,7 @@
 const title = 'Birzeit University Department of Architectural Engineering Advisory Plan';
-const note = '';
 const link_title = '';
 const url = '';
 const link_more_info = '';
-
-
 const courses = [
     //['NAME', 'CODE', ['requirement']s, 'notes']
     //'year 1 semester 1',

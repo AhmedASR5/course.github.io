@@ -1,30 +1,9 @@
 const title = 'Birzeit University Computer Engineering Advisory Plan';
-const note = '(ENCS4300) ملاحظة: التدريب العملي في صيف السنة الرابعة حسب الخطة بعد إتمام 90 ساعة';
 const link_title = '-- تفاصيل حول مساقات التركيز --';
 const url = 'https://drive.google.com/file/d/1L8dn-5Di_MJwF3AJjOZRkw2MhvT_tiBd/view';
 const link_more_info = 'تحتوي أيضاً على خطة هندسة الكهرباء';
-/*
-    notes:-
-        1) course format is //['NAME', 'CODE', ['requirement']s, 'notes']
-        2) 'notes' is not required
-        3) you have to separate between the semesters by a string like: '', 'year 1 semester2'
-        4) when there no requirements leave the array empty [] not ['']
-        5) when there no 'CODE' (course code) write ' ' not ''
-        6) you can use html tags like table, like: `<table><tr><th>المتطلبات</th><th>المادة</th></tr>
-                                                    <tr><td>ENCS3320</td><td>*(2)شبكات الحاسوب المتقدمة</td></tr>
-                                                    <tr><td>ENCS4370, ENCS3390</td><td>*(3)عمارة الحاسبات المتقدمة</td></tr>
-                                                    <tr><td>ENCS3340</td><td>*(4)تعلم الآلة وعلم البيانات</td></tr>
-                                                    </table>`
-                                                    or
-                                                    '<table><tr><th>المتطلبات</th><th>المادة</th></tr>'
-                                                    + '<tr><td>ENCS3320</td><td>*(2)شبكات الحاسوب المتقدمة</td></tr>'
-                                                    + '<tr><td>ENCS4370, ENCS3390</td><td>*(3)عمارة الحاسبات المتقدمة</td></tr>'
-                                                    + '<tr><td>ENCS3340</td><td>*(4)تعلم الآلة وعلم البيانات</td></tr>'
-                                                    + '</table>'
-        7) separatelines in notes by <br> not \n like: '*COMP230 أو COMP133<br>*مستوى سنة 3'
-*/
 const courses = [
-    //['NAME', 'CODE', ['requirement']s, 'notes']
+    //['NAME', 'CODE', ['requirement']s, 'notes', last one is number if summer]
     //'year 1 semester 1',
     ['التفاضل والتكامل 1', 'MATH1411', []],
     ['الفيزياء العامة 1', 'PHYS141',[]],
@@ -41,7 +20,7 @@ const courses = [
     ['الرسم الهندسي', 'ENME121', []],
     ['مهارات اللغة العربية 2', 'ARAB136', ['ARAB135']],
     ['لغة إنجليزية مستوى متوسط 2', 'ENGC1202', ['ENGC1201']],
-
+    
     'year 2 semester 1',
     ['أنظمة رقمية', 'ENCS2340', ['COMP133']],
     ['البرمجة الشيئية', 'COMP2310', ['COMP133']],
@@ -82,7 +61,8 @@ const courses = [
     ['معالجة الإشارات الرقمية', 'ENCS4310', ['ENEE2312', 'MATH234']],
     ['التشفير التطبيقي', 'ENCS4320', ['COMP233', 'COMP133']],
     ['مختبر شبكات الحاسوب', 'ENCS4130', ['ENCS3320']],
-    ['أخلاقيات هندسة الحاسوب', 'ENCS4210', [], ['*مستوى سنة 4']],
+    ['أخلاقيات هندسة الحاسوب', 'ENCS4210', [], '*مستوى سنة 4'],
+    ['التدريب العملي', 'ENCS4300', [], '*إتمام 90 ساعة<br>*موافقة الدائرة<br>(يؤخذ صيفاً حسب الخطة)', 1],
     
     'year 4 semester 2',
     ['الهندسة البرمجية', 'COMP433', ['COMP333']],
@@ -102,13 +82,13 @@ const courses = [
                                                     <tr><td>ENCS3340</td><td>*(4)(NLP)نظم المعلومات القائمة على النصوص</td></tr>
                                                     </table>`],
     ['مساق اختياري تركيز', ' ', [], 'المتطلبات حسب التركيز'],
-    ['مقدمة مشروع التخرج', 'ENCS5200', [], '*ساعة 115'],
+    ['مقدمة مشروع التخرج', 'ENCS5200', [], '*إتمام 115 ساعة'],
     ['مختبر نظم الزمن الحقيقي وأساليب المواءمة', 'ENCS5140', ['ENCS4330']],
     ['اختياري جامعة 1', ' ', [], 'حسب دائرة المساق'],
     ['الفكر العربي المعاصر', 'CULS332', []],
 
     'year 5 semester 2',
-    ['مشروع التخرج', 'ENCS5300', ['ENCS5200'], ['*ENCS4300 التدريب العملي']],
+    ['مشروع التخرج', 'ENCS5300', ['ENCS5200', 'ENCS4300']],
     ['مساق من أحد التراكيز', 'ENCS53(2,3,4)3', [], `<table><tr><th>المتطلبات</th><th>المادة</th></tr>
                                                     <tr><td>ENEE339أوENEE3309, ENCS3320</td><td>*(2)الشبكات اللاسلكية وشبكات الهاتف النقال</td></tr>
                                                     <tr><td>ENCS4330</td><td>(3)*الأنظمة المدمجة المتقدمة</td></tr>
@@ -119,6 +99,6 @@ const courses = [
                                             <tr><td>ENCS3330</td><td>*(3)مختبر تصميم الأجهزة</td></tr>
                                             <tr><td>ENCS3340</td><td>*(4)مختبر الأنظمة الذكية</td></tr>
                                             </table>`],
-    ['مختبر متقدم في هندسة الحاسوب', 'ENCS5150', [], '*ساعة 115'],
+    ['مختبر متقدم في هندسة الحاسوب', 'ENCS5150', [], '*إتمام 115 ساعة'],
     ['اختياري جامعة 2', ' ', [], 'حسب دائرة المساق']
 ];
