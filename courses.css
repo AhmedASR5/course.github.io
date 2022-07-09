@@ -106,7 +106,7 @@ th, td { padding: 0 1rem; }
 #guide * { 
     float: right; 
     font-weight: bolder;
-    color: #000a
+    color: #000a;
 }
 #note { margin-right: 3rem; }
 #link a { 
