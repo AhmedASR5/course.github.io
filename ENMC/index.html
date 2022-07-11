@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../courses.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="shortcut icon" href="../logo.png">
     <title>BZU-HUB CE Advisory Plan</title>
 </head>
 <body>
     <header>
-        <button id="magnifier" onclick="zoomin()">&#x1F50E;&#x2191;</button>
-        <button id="smagnifier" onclick="zoomout()">&#x1F50E;&#x2193;</button>
+        <span id="mContainer">
+            <button id="magnifier" onclick="zoomin()">&#x1F50E;&#x2191;</button>
+            <button id="smagnifier" onclick="zoomout()">&#x1F50E;&#x2193;</button>
+        </span>
         <img id="logo" src="../logo.png" alt="BZU-HUB logo">
         <h2 id="title"></h2>
     </header>
@@ -27,6 +29,7 @@
         </div>
     </main>
     <script src="data.js"></script>
-    <script src="../courses.js"></script>
+    <script src="../set_courses.js"></script>
+    <script src="../actions.js"></script>
 </body>
 </html>
