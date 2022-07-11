@@ -1,4 +1,4 @@
-const title = 'Birzeit University Computer  Advisory Plan';
+const title = 'Birzeit University Computer Science Advisory Plan';
 const link_title = ' ';
 const url = ' ';
 const link_more_info = ' ';
@@ -36,7 +36,7 @@ const courses = [
     ['اختياري تخصص', ' ', []],
 
     'year 3 semester 1',
-    ['إدارة قواعد البيانات', 'COMP3330', ['NUTD238', 'NUTD239'],'أو متزامن'],
+    ['إدارة قواعد البيانات', 'COMP3330', ['COMP242'],'أو متزامن'],
     ['تحليل الخوارزميات', 'COMP336', ['COMP242']],
     ['تنظيم الحاسوب ولغة التجميع', 'ENCS3360', ['ENCS2340']],
     ['الحضارة الاوروبية الحديثه والمعاصره', 'CULS331', [],'يجب انهاء 30 ساعة'],
