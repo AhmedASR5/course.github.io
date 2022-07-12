@@ -17,7 +17,7 @@ const courses = [
     ['لغة إنجليزية مستوى متوسط 4', 'ENGC2202', ['ENGC2201']],
     ['German for Beginners 2b (A2)', 'GERM133', ['GERM132']],
     ['اختياري كلية', ' ', []],
-    ['الفكر العربي الحديث والمعاصر', 'CULS332', [],'يجب انهاء 30 ساعة'],
+    ['مساق اختياري', ' ', []],
 
     'year 2 semester 1',
     ['Intermediate German 1a (B1.1)', 'GERM230', ['GERM132','GERM133']],
@@ -32,8 +32,8 @@ const courses = [
     ['لغة إنجليزية مستوى متقدم 2', 'ENGC2204', ['ENGC2203']],
     ['إIntroduction to German Literature', 'GERM234', ['GERM230','GERM2311']],
     ['Introduction to German Country Studies', 'GERM2321', ['GERM230','GERM2311']],
+    ['الفكر العربي الحديث والمعاصر', 'CULS332', [],'يجب انهاء 30 ساعة'],
     ['اختياري كلية', ' ', []],
-    ['مساق اختياري', ' ', []],
 
     'year 3 semester 1',
     ['Intermediate German III (B2.1)', 'GERM3301', ['GERM233']],
